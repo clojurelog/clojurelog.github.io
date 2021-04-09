@@ -1,0 +1,44 @@
+
+body {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  width: 68%;
+}
+
+#title-wrapper {
+  width: 100%;
+}
+
+#title {
+  width: 68%;
+  margin: 0 auto;
+  padding-bottom: 58px;
+}
+
+#goodbye {
+  padding: 58px;
+}
+
+#github {
+  padding: 58px;
+  img { margin: 0 auto; }
+}
+
+.y {
+  background-color: green;
+}
+
+.m {
+  background-color: yellow;
+}
+
+.n {
+  background-color: red;
+}

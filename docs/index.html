@@ -2,7 +2,7 @@
 
 <HTML>
 <HEAD>
-	
+
 	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=us-ascii">
 	<TITLE></TITLE>
 	<META NAME="GENERATOR" CONTENT="OpenOffice 4.1.1  (FreeBSD/amd64)">
@@ -10,286 +10,343 @@
 	<META NAME="CREATED" CONTENT="20210322;18243208">
 	<META NAME="CHANGEDBY" CONTENT="Jeremy Taylor">
 	<META NAME="CHANGED" CONTENT="20210408;17415773">
-	
-	<STYLE>
-		<!-- 
-		BODY,DIV,TABLE,THEAD,TBODY,TFOOT,TR,TH,TD,P { font-family:"Liberation Sans"; font-size:x-small }
-		 -->
-	</STYLE>
-	
+
+  <link rel="stylesheet" href="materialize.min.css">
+  <link rel="stylesheet" href="clojurelog.css"
+
 </HEAD>
 
 <BODY TEXT="#000000">
-<TABLE FRAME=VOID CELLSPACING=0 COLS=6 RULES=NONE BORDER=0>
-	<COLGROUP><COL WIDTH=498><COL WIDTH=85><COL WIDTH=85><COL WIDTH=85><COL WIDTH=85><COL WIDTH=85></COLGROUP>
+  <div id="title-wrapper">
+  <div id="title">
+    <h1>Open Source Clojure-Datalog Databases</h1>
+
+    <p>
+      This page exists as an easy reference to compare and contrast the available
+      open source Clojure-Datalog databases. Only databases under active development
+      are listed. This matrix may contain mistakes. If you believe we have missed an
+      important database or if any of the data is incorrect, please
+      <a href="https://github.com/clojurelog/clojurelog.github.io">submit a PR</a>. Thanks!
+    </p>
+  </div>
+  </div>
+
+  <TABLE FRAME=VOID CELLSPACING=0 COLS=6 RULES=NONE BORDER=0 >
 	<TBODY>
 		<TR>
-			<TD WIDTH=498 HEIGHT=16 ALIGN=LEFT>open source Clojure-Datalog databases under active development</TD>
-			<TD WIDTH=85 ALIGN=LEFT>DataScript</TD>
-			<TD WIDTH=85 ALIGN=LEFT>Datalevin</TD>
-			<TD WIDTH=85 ALIGN=LEFT>Datahike</TD>
-			<TD WIDTH=85 ALIGN=LEFT>Asami</TD>
-			<TD WIDTH=85 ALIGN=LEFT>Crux</TD>
+			<TD></TD>
+			<TD>DataScript</TD>
+			<TD>Datalevin</TD>
+			<TD>Datahike</TD>
+			<TD>Asami</TD>
+			<TD>Crux</TD>
 		</TR>
+
 		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Durable storage</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
+			<TD>Durable storage</TD>
+			<TD>.</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
 		</TR>
+
 		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Transaction-Time history</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
+			<TD>Transaction-Time history</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
 		</TR>
+
 		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Explicit Schema-on-Write</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
+			<TD>Explicit Schema-on-Write</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
 		</TR>
+
 		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>&ldquo;Datom&rdquo; semantics</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
+			<TD>&ldquo;Datom&rdquo; semantics</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Query planner</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Query planner</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Speculative transactions</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>(short-term)</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Speculative transactions</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="m">(short-term)</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Transaction functions</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>(mid-term)</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Transaction functions</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="m">(mid-term)</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Valid-Time history</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Valid-Time history</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Lazy queries</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Lazy queries</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>~Constant time `as-of` lookups</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>~Constant time `as-of` lookups</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Ad-hoc &quot;document&quot; storage (i.e. maps of arbitrary types)</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Ad-hoc &quot;document&quot; storage (i.e. maps of arbitrary types)</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Pull syntax</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Pull syntax</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Eviction</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Eviction</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>`byte-array` value type</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>`byte-array` value type</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Full-text search (Lucene)</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Full-text search (Lucene)</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Wildcard attributes</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
+
+    <TR>
+			<TD>Wildcard attributes</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Advanced graph features (paths, transitive edges, multigraph)</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
+
+    <TR>
+			<TD>Advanced graph features (paths, transitive edges, multigraph)</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Composite tuples</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>(short-term)</TD>
-			<TD ALIGN=LEFT>.</TD>
+
+    <TR>
+			<TD>Composite tuples</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="m">(short-term)</TD>
+			<TD class="n">.</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT><BR></TD>
-			<TD ALIGN=LEFT><BR></TD>
-			<TD ALIGN=LEFT><BR></TD>
-			<TD ALIGN=LEFT><BR></TD>
-			<TD ALIGN=LEFT><BR></TD>
-			<TD ALIGN=LEFT><BR></TD>
+
+    <TR>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>ClojureScript runtime</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
+
+    <TR>
+			<TD>ClojureScript runtime</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Java API</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Java API</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Graal native image</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
+
+    <TR>
+			<TD>Graal native image</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>HTTP API</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>HTTP API</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Remote client API</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Remote client API</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>UI console</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>UI console</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>SQL</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>SQL</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Online index upgrades</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Online index upgrades</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Low-latency commits (asynchronous indexing)</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Low-latency commits (asynchronous indexing)</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Horizontal scaling (clustering)</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>(could)</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Horizontal scaling (clustering)</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="m">(could)</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Commercial support</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>.</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Commercial support</TD>
+			<TD class="n">.</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT><BR></TD>
-			<TD ALIGN=LEFT><BR></TD>
-			<TD ALIGN=LEFT><BR></TD>
-			<TD ALIGN=LEFT><BR></TD>
-			<TD ALIGN=LEFT><BR></TD>
-			<TD ALIGN=LEFT><BR></TD>
+
+    <TR>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
 		</TR>
-		<TR>
-			<TD HEIGHT=16 ALIGN=LEFT>Single-writer</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
-			<TD ALIGN=LEFT>Y</TD>
+
+    <TR>
+			<TD>Single-writer</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
 		</TR>
 	</TBODY>
-</TABLE>
-<!-- ************************************************************************** -->
+  </TABLE>
+  <!-- ************************************************************************** -->
+
+  <div id="goodbye">
+		<div>DataScript: <a href="https://github.com/tonsky/datascript">https://github.com/tonsky/datascript</a></div>
+		<div>Datalevin: <a href="https://github.com/juji-io/datalevin">https://github.com/juji-io/datalevin</a></div>
+		<div>Datahike: <a href="https://github.com/replikativ/datahike">https://github.com/replikativ/datahike</a></div>
+		<div>Asami: <a href="https://github.com/threatgrid/asami">https://github.com/threatgrid/asami</a></div>
+		<div>Crux: <a href="https://opencrux.com">https://opencrux.com</a></div>
+  </div>
+
+  <div id="github">
+    <a href="https://github.com/clojurelog/clojurelog.github.io">
+      <img src="https://opencrux.com/_/images/github.svg" />
+    </a>
+  </div>
+
 </BODY>
 
 </HTML>
