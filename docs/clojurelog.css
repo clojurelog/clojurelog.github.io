@@ -23,7 +23,10 @@ table {
 }
 
 #goodbye {
-  padding: 58px;
+  width: 68%;
+  margin: 0 auto;
+  padding-bottom: 58px;
+  padding-top: 58px;
 }
 
 #github {
@@ -31,14 +34,47 @@ table {
   img { margin: 0 auto; }
 }
 
+.x {
+  width: 170px;
+  background-color: lightgrey;
+  color:grey;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0px;
+}
+
 .y {
-  background-color: green;
+  width: 170px;
+  background-color: lightgreen;
+  color:green;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0px;
 }
 
 .m {
-  background-color: yellow;
+  width: 170px;
+  background-color: darkorange;
+  color:brown;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0px;
 }
 
 .n {
-  background-color: red;
+  width: 170px;
+  background-color: indianred;
+  color:darkred;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0px;
 }
+
+.t {
+  width: 170px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0px;
+}
+
+
