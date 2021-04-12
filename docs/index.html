@@ -4,12 +4,7 @@
 <HEAD>
 
 	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=us-ascii">
-	<TITLE></TITLE>
-	<META NAME="GENERATOR" CONTENT="OpenOffice 4.1.1  (FreeBSD/amd64)">
-	<META NAME="AUTHOR" CONTENT="Jeremy Taylor">
-	<META NAME="CREATED" CONTENT="20210322;18243208">
-	<META NAME="CHANGEDBY" CONTENT="Jeremy Taylor">
-	<META NAME="CHANGED" CONTENT="20210408;17415773">
+	<TITLE>OSS Clojure-Datalog Databases</TITLE>
 
   <link rel="stylesheet" href="materialize.min.css">
   <link rel="stylesheet" href="clojurelog.css"
@@ -22,11 +17,21 @@
     <h1>Open Source Clojure-Datalog Databases</h1>
 
     <p>
-      This page exists as an easy reference to compare and contrast the available
-      open source Clojure-Datalog databases. Only databases under active development
-      are listed. This matrix may contain mistakes. If you believe we have missed an
-      important database or if any of the data is incorrect, please
-      <a href="https://github.com/clojurelog/clojurelog.github.io">submit a PR</a>. Thanks!
+      This page exists as an easy reference to compare and contrast the
+      available open source Clojure-Datalog databases. Only databases under active
+      development are listed.
+    </p>
+    <p>
+      Note that DataScript is not really a database since it lacks durability,
+      but both Datahike and Datalevin started life as DataScript forks which
+      added durable indexes.
+      </p>
+    <p>
+      This matrix may contain mistakes and be missing various important
+      dimensions. If you believe other projects should be added or if any of the
+      data is incorrect, please
+      <a href="https://github.com/clojurelog/clojurelog.github.io">submit a
+        PR</a>. Thanks!
     </p>
   </div>
   </div>
@@ -34,17 +39,17 @@
   <TABLE FRAME=VOID CELLSPACING=0 COLS=6 RULES=NONE BORDER=0 >
 	<TBODY>
 		<TR>
-			<TD></TD>
-			<TD>DataScript</TD>
-			<TD>Datalevin</TD>
-			<TD>Datahike</TD>
-			<TD>Asami</TD>
-			<TD>Crux</TD>
+			<TD><b>Functional</b> Capabilities</TD>
+			<TD class="t"><a href="https://github.com/tonsky/datascript">DataScript</a></TD>
+			<TD class="t"><a href="https://github.com/juji-io/datalevin">Datalevin</a></TD>
+			<TD class="t"><a href="https://github.com/replikativ/datahike">Datahike</a></TD>
+			<TD class="t"><a href="https://github.com/threatgrid/asami">Asami</a></TD>
+			<TD class="t"><a href="https://opencrux.com">Crux</a></TD>
 		</TR>
 
 		<TR>
 			<TD>Durable storage</TD>
-			<TD>.</TD>
+			<TD class="x">N/A</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
@@ -53,8 +58,8 @@
 
 		<TR>
 			<TD>Transaction-Time history</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="x">N/A</TD>
+			<TD class="x">N/A</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
@@ -65,24 +70,24 @@
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="x">N/A</TD>
+			<TD class="x">N/A</TD>
 		</TR>
 
 		<TR>
-			<TD>&ldquo;Datom&rdquo; semantics</TD>
+			<TD>&ldquo;Datom&rdquo; transaction semantics</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
+			<TD class="x">N/A</TD>
 		</TR>
 
     <TR>
 			<TD>Query planner</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="m">Proposed (<a href="https://github.com/juji-io/datalevin/issues/11">Issue</a>)</TD>
+			<TD class="m">Proposed (<a href="https://github.com/replikativ/datahike/issues/294">Issue</a>)</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 		</TR>
@@ -92,7 +97,7 @@
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
-			<TD class="m">(short-term)</TD>
+			<TD class="m">Planned (<a href="https://github.com/threatgrid/asami/issues/113">Issue</a>)</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
@@ -101,43 +106,34 @@
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
-			<TD class="m">(mid-term)</TD>
+			<TD class="m">Proposed (Issue TBD)</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
 			<TD>Valid-Time history</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="x">N/A</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
 			<TD>Lazy queries</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="y">Y</TD>
-			<TD class="y">Y</TD>
-		</TR>
-
-    <TR>
-			<TD>~Constant time `as-of` lookups</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
 			<TD>Ad-hoc &quot;document&quot; storage (i.e. maps of arbitrary types)</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
@@ -146,16 +142,16 @@
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
+			<TD class="m">Proposed (<a href="https://github.com/threatgrid/asami/issues/126">Issue</a>)</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
-			<TD>Eviction</TD>
+			<TD>Eviction / Excision (for data privacy compliance)</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
@@ -163,17 +159,17 @@
 			<TD>`byte-array` value type</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
 			<TD>Full-text search (Lucene)</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
@@ -183,16 +179,16 @@
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
 		</TR>
 
     <TR>
 			<TD>Advanced graph features (paths, transitive edges, multigraph)</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
 		</TR>
 
     <TR>
@@ -200,8 +196,8 @@
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
-			<TD class="m">(short-term)</TD>
-			<TD class="n">.</TD>
+			<TD class="m">Planned (Issue TBD)</TD>
+			<TD class="n">N</TD>
 		</TR>
 
     <TR>
@@ -211,114 +207,96 @@
 			<TD><BR></TD>
 			<TD><BR></TD>
 			<TD><BR></TD>
+		</TR>
+
+    <TR>
+			<TD><b>Non-functional</b> capabilities</TD>
+			<TD class="t"><a href="https://github.com/tonsky/datascript">DataScript</a></TD>
+			<TD class="t"><a href="https://github.com/juji-io/datalevin">Datalevin</a></TD>
+			<TD class="t"><a href="https://github.com/replikativ/datahike">Datahike</a></TD>
+			<TD class="t"><a href="https://github.com/threatgrid/asami">Asami</a></TD>
+			<TD class="t"><a href="https://opencrux.com">Crux</a></TD>
 		</TR>
 
     <TR>
 			<TD>ClojureScript runtime</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">N</TD>
 		</TR>
 
     <TR>
-			<TD>Java API</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD>Typed Java API</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
 			<TD>Graal native image</TD>
-			<TD class="n">.</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
+			<TD class="y">Y</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">N</TD>
 		</TR>
 
     <TR>
 			<TD>HTTP API</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
 			<TD>Remote client API</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
 			<TD>UI console</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
 			<TD>SQL</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
 			<TD>Online index upgrades</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
 		</TR>
 
     <TR>
 			<TD>Low-latency commits (asynchronous indexing)</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
 			<TD class="y">Y</TD>
-		</TR>
-
-    <TR>
-			<TD>Horizontal scaling (clustering)</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="y">Y</TD>
-			<TD class="m">(could)</TD>
-			<TD class="y">Y</TD>
-		</TR>
-
-    <TR>
-			<TD>Commercial support</TD>
-			<TD class="n">.</TD>
-			<TD class="n">.</TD>
-			<TD class="y">Y</TD>
-			<TD class="n">.</TD>
-			<TD class="y">Y</TD>
-		</TR>
-
-    <TR>
-			<TD><BR></TD>
-			<TD><BR></TD>
-			<TD><BR></TD>
-			<TD><BR></TD>
-			<TD><BR></TD>
-			<TD><BR></TD>
 		</TR>
 
     <TR>
@@ -329,23 +307,57 @@
 			<TD class="y">Y</TD>
 			<TD class="y">Y</TD>
 		</TR>
+
+    <TR>
+			<TD>Horizontal scaling (clustering)</TD>
+			<TD class="x">N/A</TD>
+			<TD class="m">Proposed (<a href="https://github.com/juji-io/datalevin/issues/9">Issue</a>)</TD>
+			<TD class="y">Y</TD>
+			<TD class="m">Proposed (Issue TBD)</TD>
+			<TD class="y">Y</TD>
+		</TR>
+
+    <TR>
+			<TD>Commercial support</TD>
+			<TD class="n">N</TD>
+			<TD class="n">N</TD>
+			<TD class="y">Y</TD>
+			<TD class="n">N</TD>
+			<TD class="y">Y</TD>
+		</TR>
+
+    <TR>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+		</TR>
+
+    <TR>
+			<TD><a href="https://github.com/clojurelog/clojurelog.github.io/issues/new">Suggestions? Questions?</a></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+			<TD><BR></TD>
+		</TR>
+
 	</TBODY>
   </TABLE>
   <!-- ************************************************************************** -->
 
   <div id="goodbye">
-		<div>DataScript: <a href="https://github.com/tonsky/datascript">https://github.com/tonsky/datascript</a></div>
-		<div>Datalevin: <a href="https://github.com/juji-io/datalevin">https://github.com/juji-io/datalevin</a></div>
-		<div>Datahike: <a href="https://github.com/replikativ/datahike">https://github.com/replikativ/datahike</a></div>
-		<div>Asami: <a href="https://github.com/threatgrid/asami">https://github.com/threatgrid/asami</a></div>
-		<div>Crux: <a href="https://opencrux.com">https://opencrux.com</a></div>
-  </div>
-
-  <div id="github">
+    <p>This matrix was originally created by the Crux team but seeks to avoid bias.</p>
+    Thank you to all the contributors to these exciting projects and to everyone who has provided feedback and input to this matrix.
     <a href="https://github.com/clojurelog/clojurelog.github.io">
       <img src="https://opencrux.com/_/images/github.svg" />
+      <img src="https://opencrux.com/_/images/github-dark.svg" />
     </a>
+
   </div>
+
 
 </BODY>
 
