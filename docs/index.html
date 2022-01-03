@@ -75,8 +75,16 @@
           <TD class="t"><a href="https://github.com/juji-io/datalevin">Datalevin</a></TD>
           <TD class="t"><a href="https://github.com/replikativ/datahike">Datahike</a></TD>
           <TD class="t"><a href="https://github.com/threatgrid/asami">Asami</a></TD>
-          <TD class="t"><a href="https://xtdb.com">XTDB (née Crux)</a></TD>
+          <TD class="t"><a href="https://xtdb.com">XTDB</a></TD>
         </TR>
+
+        <tr>
+          <td colspan="6">
+            <h4>
+              Storage:
+            </h4>
+          </td>
+        </tr>
 
         <TR>
           <TD>Durable storage</TD>
@@ -97,6 +105,32 @@
         </TR>
 
         <TR>
+          <TD>Valid-Time history</TD>
+          <TD class="x">N/A</TD>
+          <TD class="x">N/A</TD>
+          <TD class="n">N</TD>
+          <TD class="n">N</TD>
+          <TD class="y">Y</TD>
+        </TR>
+
+        <TR>
+          <TD>`byte-array` value type</TD>
+          <TD class="y">Y</TD>
+          <TD class="y">Y</TD>
+          <TD class="n">N</TD>
+          <TD class="y">Y</TD>
+          <TD class="y">Y</TD>
+        </TR>
+
+        <tr>
+          <td colspan="6">
+            <h4>
+              Transactions:
+            </h4>
+          </td>
+        </tr>
+
+        <TR>
           <TD>Explicit Schema-on-Write</TD>
           <TD class="y">Y</TD>
           <TD class="y">Y</TD>
@@ -112,24 +146,6 @@
           <TD class="y">Y</TD>
           <TD class="y">Y</TD>
           <TD class="x">N/A</TD>
-        </TR>
-
-        <TR>
-          <TD>Query planner</TD>
-          <TD class="n">N</TD>
-          <TD class="m">Proposed (<a href="https://github.com/juji-io/datalevin/issues/11">Issue</a>)</TD>
-          <TD class="m">Proposed (<a href="https://github.com/replikativ/datahike/issues/294">Issue</a>)</TD>
-          <TD class="y">Y</TD>
-          <TD class="y">Y</TD>
-        </TR>
-
-        <TR>
-          <TD>Datalog rules</TD>
-          <TD class="y">Y</TD>
-          <TD class="y">Y</TD>
-          <TD class="y">Y</TD>
-          <TD class="n">Proposed (<a href="https://github.com/threatgrid/asami/issues/194">Issue</a>)</TD>
-          <TD class="y">Y</TD>
         </TR>
 
         <TR>
@@ -151,38 +167,11 @@
         </TR>
 
         <TR>
-          <TD>Valid-Time history</TD>
-          <TD class="x">N/A</TD>
-          <TD class="n">N</TD>
-          <TD class="n">N</TD>
-          <TD class="n">N</TD>
-          <TD class="y">Y</TD>
-        </TR>
-
-        <TR>
-          <TD>Lazy queries</TD>
-          <TD class="n">N</TD>
-          <TD class="n">N</TD>
-          <TD class="n">N</TD>
-          <TD class="y">Y</TD>
-          <TD class="y">Y</TD>
-        </TR>
-
-        <TR>
-          <TD>Ad-hoc &quot;document&quot; storage (i.e. maps of arbitrary types)</TD>
+          <TD>Arbitrary map ("document") storage</TD>
           <TD class="y">Y</TD>
           <TD class="y">Y</TD>
           <TD class="n">N</TD>
           <TD class="m">Planned (<a href="https://github.com/threatgrid/asami/issues/103">Issue</a>)</TD>
-          <TD class="y">Y</TD>
-        </TR>
-
-        <TR>
-          <TD>Pull syntax</TD>
-          <TD class="y">Y</TD>
-          <TD class="y">Y</TD>
-          <TD class="y">Y</TD>
-          <TD class="m">Proposed (<a href="https://github.com/threatgrid/asami/issues/126">Issue</a>)</TD>
           <TD class="y">Y</TD>
         </TR>
 
@@ -196,20 +185,55 @@
         </TR>
 
         <TR>
-          <TD>`byte-array` value type</TD>
+          <TD>Composite tuples</TD>
+          <TD class="y">Y</TD>
+          <TD class="m">Planned (<a href="https://github.com/juji-io/datalevin/issues/3">Issue</a>)</TD>
+          <TD class="y">Y</TD>
+          <TD class="m">Planned (<a href="https://github.com/threatgrid/asami/issues/168">Issue</a>)</TD>
+          <TD class="n">N</TD>
+        </TR>
+
+        <tr>
+          <td colspan="6">
+            <h4>
+              Query:
+            </h4>
+          </td>
+        </tr>
+
+        <TR>
+          <TD>Query planner</TD>
+          <TD class="n">N</TD>
+          <TD class="m">Proposed (<a href="https://github.com/juji-io/datalevin/issues/11">Issue</a>)</TD>
+          <TD class="m">Proposed (<a href="https://github.com/replikativ/datahike/issues/294">Issue</a>)</TD>
           <TD class="y">Y</TD>
           <TD class="y">Y</TD>
+        </TR>
+
+        <TR>
+          <TD>Datalog rules</TD>
+          <TD class="y">Y</TD>
+          <TD class="y">Y</TD>
+          <TD class="y">Y</TD>
+          <TD class="n">Proposed (<a href="https://github.com/threatgrid/asami/issues/194">Issue</a>)</TD>
+          <TD class="y">Y</TD>
+        </TR>
+
+        <TR>
+          <TD>Lazy queries</TD>
+          <TD class="n">N</TD>
+          <TD class="n">N</TD>
           <TD class="n">N</TD>
           <TD class="y">Y</TD>
           <TD class="y">Y</TD>
         </TR>
 
         <TR>
-          <TD>Full-text search (Lucene)</TD>
-          <TD class="n">N</TD>
-          <TD class="m">Proposed (<a href="https://github.com/juji-io/datalevin/issues/27">Issue</a>)</TD>
-          <TD class="n">N</TD>
-          <TD class="n">N</TD>
+          <TD>Pull syntax</TD>
+          <TD class="y">Y</TD>
+          <TD class="y">Y</TD>
+          <TD class="y">Y</TD>
+          <TD class="m">Proposed (<a href="https://github.com/threatgrid/asami/issues/126">Issue</a>)</TD>
           <TD class="y">Y</TD>
         </TR>
 
@@ -223,6 +247,24 @@
         </TR>
 
         <TR>
+          <TD>Full-text search</TD>
+          <TD class="n">N</TD>
+          <TD class="m">Proposed (<a href="https://github.com/juji-io/datalevin/issues/27">Issue</a>)</TD>
+          <TD class="n">N</TD>
+          <TD class="n">N</TD>
+          <TD class="y">Y</TD>
+        </TR>
+
+        <TR>
+          <TD>SQL</TD>
+          <TD class="n">N</TD>
+          <TD class="n">N</TD>
+          <TD class="n">N</TD>
+          <TD class="n">N</TD>
+          <TD class="y">Y</TD>
+        </TR>
+
+        <TR>
           <TD>Advanced graph features (paths, transitive edges, multigraph)</TD>
           <TD class="n">N</TD>
           <TD class="n">N</TD>
@@ -231,13 +273,21 @@
           <TD class="n">N</TD>
         </TR>
 
+        <tr>
+          <td colspan="6">
+            <h4>
+              Developer Experience:
+            </h4>
+          </td>
+        </tr>
+
         <TR>
-          <TD>Composite tuples</TD>
+          <TD>Clojure (JVM) runtime</TD>
           <TD class="y">Y</TD>
-          <TD class="m">Planned (<a href="https://github.com/juji-io/datalevin/issues/3">Issue</a>)</TD>
+          <TD class="y">N</TD>
           <TD class="y">Y</TD>
-          <TD class="m">Planned (<a href="https://github.com/threatgrid/asami/issues/168">Issue</a>)</TD>
-          <TD class="n">N</TD>
+          <TD class="y">Y</TD>
+          <TD class="y">N</TD>
         </TR>
 
         <TR>
@@ -250,21 +300,21 @@
         </TR>
 
         <TR>
+          <TD>Graal native image</TD>
+          <TD class="y">Y</TD>
+          <TD class="y">Y</TD>
+          <TD class="m">Possible</TD>
+          <TD class="y">Y</TD>
+          <TD class="n">N (<a href="https://github.com/xtdb/xtdb/issues/155">Issue</a>)</TD>
+        </TR>
+
+        <TR>
           <TD>Typed Java API</TD>
           <TD class="n">N</TD>
           <TD class="n">N</TD>
           <TD class="y">Y</TD>
           <TD class="n">N</TD>
           <TD class="y">Y</TD>
-        </TR>
-
-        <TR>
-          <TD>Graal native image</TD>
-          <TD class="y">Y</TD>
-          <TD class="y">Y</TD>
-          <TD class="m">Possible</TD>
-          <TD class="y">Y</TD>
-          <TD class="n">Possible (<a href="https://github.com/xtdb/xtdb/issues/155">Issue</a>)</TD>
         </TR>
 
         <TR>
@@ -303,14 +353,13 @@
           <TD class="n">N</TD>
         </TR>
 
-        <TR>
-          <TD>SQL</TD>
-          <TD class="n">N</TD>
-          <TD class="n">N</TD>
-          <TD class="n">N</TD>
-          <TD class="n">N</TD>
-          <TD class="y">Y</TD>
-        </TR>
+        <tr>
+          <td colspan="6">
+            <h4>
+              Administration:
+            </h4>
+          </td>
+        </tr>
 
         <TR>
           <TD>Online index upgrades</TD>
@@ -322,7 +371,7 @@
         </TR>
 
         <TR>
-          <TD>Low-latency commits (asynchronous indexing)</TD>
+          <TD>Asynchronous indexing</TD>
           <TD class="n">N</TD>
           <TD class="n">N</TD>
           <TD class="n">N</TD>
@@ -371,12 +420,11 @@
 		    </TR>
 
         <TR>
-			    <TD><a href="https://github.com/clojurelog/clojurelog.github.io/issues/new">Suggestions? Questions?</a></TD>
-			    <TD><BR></TD>
-			    <TD><BR></TD>
-			    <TD><BR></TD>
-			    <TD><BR></TD>
-			    <TD><BR></TD>
+			    <TD colspan="6">
+            <a href="https://github.com/clojurelog/clojurelog.github.io/issues/new">
+              Suggestions? Questions?
+            </a>
+          </TD>
 		    </TR>
 
 	    </TBODY>

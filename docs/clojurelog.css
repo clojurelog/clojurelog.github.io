@@ -7,6 +7,10 @@ h1 {
   text-align: center;
 }
 
+h4 {
+  font-weight: bold;
+}
+
 table {
   margin: 0 auto;
   width: 68%;
@@ -76,5 +80,3 @@ table {
   vertical-align: middle;
   border-radius: 0px;
 }
-
-
