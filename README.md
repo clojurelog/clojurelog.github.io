@@ -1,3 +1,3 @@
 # clojurelog
 
-Matrix of Clojure Datalog Databases
+Matrix of Open Source Clojure Datalog Databases
