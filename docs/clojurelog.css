@@ -16,6 +16,12 @@ table {
   width: 68%;
 }
 
+table > tbody > tr#sticky-header {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+}
+
 #title-wrapper {
   width: 100%;
 }
